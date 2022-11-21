@@ -9,7 +9,8 @@ app.use(json())
 app.use(authRouter)
 app.use(userRouter)
 
+const port = process.env.PORT || 5000
 
-app.listen(5000, () => {
-    console.log("Rodando em http://localhost:5000");
+app.listen(port, () => {
+    console.log(`Rodando em http://localhost:${port}`);
 })
