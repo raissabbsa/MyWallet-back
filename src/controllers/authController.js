@@ -3,7 +3,7 @@ import { v4 as uuidV4 } from "uuid"
 import { sessionsCollection, usersCollection } from "../database/db.js"
 import { userSchema } from "../models/user.models.js"
 
-export async function signIn(req, res) {
+export async function signUp(req, res) {
     const user = req.body
 
     try {
@@ -26,7 +26,7 @@ export async function signIn(req, res) {
     }
 }
 
-export async function signUp(req, res) {
+export async function signIn(req, res) {
     const { email, password } = req.body
 
     try {
